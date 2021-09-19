@@ -1,5 +1,3 @@
-
-
 var APIKey = "2d62885b9291cabc94e793d6b1fc4f27"
 
 var city = localStorage.getItem("city");
@@ -19,7 +17,7 @@ console.log(city);
 // convert it into something I can turn into textcontent
 
 // I need to save recent searches to local storage
-var typeArea = document.querySelector(".searcher");
+var typeArea = document.querySelector("#searcher");
 var button1 = document.querySelector(".searchcity")
 
 function saverTester(key, value) {
@@ -33,8 +31,9 @@ var cityNameContainer = document.querySelector('#city-result')
 var tempContainer = document.querySelector('#temp-result')
 
 button1.addEventListener("click", () => {
-
-
+  
+            console.log(typeArea.value)
+            saverTester("city", typeArea.value)
 
     fetch(queryURL)
         .then(function (response) {
@@ -56,11 +55,8 @@ button1.addEventListener("click", () => {
             cityNameContainer.append(userName);
             tempContainer.append(userUrl);
             
-            console.log(typeArea.value)
-            saverTester("city", typeArea.value)
-            // tempResponse.value = data.main.temp;
 
-            // document.getElementById("#city-result").textContent = "boston";
+            
 
             console.log(data.main.temp)
 
