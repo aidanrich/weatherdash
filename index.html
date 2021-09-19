@@ -6,35 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Document</title>
+    <title>Weather Dashboard</title>
 </head>
 
 
-    <body class="min-100-vh flex-column">
-        <header class="p-5 text-center text-white bg-primary">
-          <h1>Server-Side APIs</h1>
-        </header>
-        <main class="flex-row justify-center align-center col-auto p-4 bg-light">
-          <section class="card card-rounded col-7 bg-white">
-            <header class="card-header text-center">
-              <h2 class="text-white">
-                Fetch Demo
-              </h2>
-            </header>
-            <div class="text-center pt-4">
-              <button class="btn btn-danger" id="fetch-button">
-                Click Me
-              </button>
+    <body>
+<div>
+        <input class="form-control form-control-lg searcher" type="text" placeholder="Search for a city here">
+        <button type="button" class="btn btn-primary btn-lg searchcity">Large button</button>    
+    </div>
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+            <div class="card-header"></div>
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text"></p>
             </div>
-            <table class="card-body table mx-auto my-4">
-              <th>
-                <p class="my-4">Results</p>
-              </th>
-              <tbody id="weathertable" class="mx-auto text-center"></tbody>
-            </table>
-          </section>
-                    
+          </div>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
