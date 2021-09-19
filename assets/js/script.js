@@ -6,10 +6,11 @@ var city = localStorage.getItem("city");
 
 var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
 
-var citySearch;
+var citySearch = document.getElementById('city-result');
+var tempEl = document.getElementById('temp-result')
 
 console.log(city);
-// Now I need a fetch(queryURL)
+
 
 // I need a search function
 // I need weather results to appear on click
@@ -27,47 +28,53 @@ function saverTester(key, value) {
     } else localStorage.setItem(key, value)
 }
 
+
+var cityNameContainer = document.querySelector('#city-result')
+var tempContainer = document.querySelector('#temp-result')
+
 button1.addEventListener("click", () => {
 
-    console.log(typeArea.value)
-    saverTester("city", typeArea.value)
+
+
+    fetch(queryURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data)
+            console.log(data.main);
+            // for (var i = 0; i < data.length; i++) {
+            var userName = document.createElement('h3');
+            var userUrl = document.createElement('p');
+
+            //Setting the text of the h3 element and p element.
+            userName.textContent = localStorage.getItem("city");
+            userUrl.textContent = data.main.temp;
+
+            //Appending the dynamically generated html to the div associated with the id="users"
+            //Append will attach the element as the bottom most child.
+            cityNameContainer.append(userName);
+            tempContainer.append(userUrl);
+            
+            console.log(typeArea.value)
+            saverTester("city", typeArea.value)
+            // tempResponse.value = data.main.temp;
+
+            // document.getElementById("#city-result").textContent = "boston";
+
+            console.log(data.main.temp)
+
+            // }
+
+        });
 })
 
 typeArea.value = localStorage.getItem("city")
 
-
+// Now I need a fetch(queryURL)
 console.log(queryURL)
 
-fetch(queryURL)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(data)
-        console.log(data.main);
-        for (var i = 0; i < data.length; i++) {
-            
 
-           
-            
-        } 
-    });
+
+
 console.log("hello")
-// function weatherSearch() {
-//     var input, filter, ul, li, a, i, txtValue;
-//     input = document.getElementById('myInput');
-//     filter = input.value.toUpperCase();
-//     ul = document.getElementById("myUL");
-//     li = ul.getElementsByTagName('li');
-  
-//     // Loop through all list items, and hide those who don't match the search query
-//     for (i = 0; i < li.length; i++) {
-//       a = li[i].getElementsByTagName("a")[0];
-//       txtValue = a.textContent || a.innerText;
-//       if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//         li[i].style.display = "";
-//       } else {
-//         li[i].style.display = "none";
-//       }
-//     }
-// }
