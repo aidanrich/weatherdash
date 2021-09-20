@@ -28,6 +28,7 @@ function saverTester(key, value) {
 
 var cityNameContainer = document.querySelector('#city-result')
 var tempContainer = document.querySelector('#temp-result')
+var humContainer = document.querySelector('#hum-result')
 
 button1.addEventListener("click", () => {
   
@@ -44,22 +45,21 @@ button1.addEventListener("click", () => {
             
             var userName = document.createElement('h3');
             var userUrl = document.createElement('p');
+            var humidity = document.createElement('p');
 
             //Setting the text of the h3 element and p element.
             userName.textContent = localStorage.getItem("city");
-            userUrl.textContent = "Temperature: " + data.main.temp + "F";
+            userUrl.textContent = "Temperature: " + data.main.temp + "F" + " Humidity: " + data.main.humidity;
+            // humidity.textContent = "Humidity: " ;
+            console.log(humidity.textContent);
 
             //Appending the dynamically generated html to the div associated with the id="users"
             //Append will attach the element as the bottom most child.
             cityNameContainer.appendChild(userName);
             tempContainer.appendChild(userUrl);
-            
-
-            
+            // humContainer.append(humidity);
 
             console.log(data.main.temp)
-
-           
 
         });
 })
