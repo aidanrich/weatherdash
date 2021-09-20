@@ -3,7 +3,7 @@ var APIKey = "2d62885b9291cabc94e793d6b1fc4f27"
 var city = localStorage.getItem("city");
 
 var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + APIKey;
-
+var queryFuture = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial" + "&appid=" + APIKey;
 
 console.log(city);
 
@@ -49,22 +49,37 @@ button1.addEventListener("click", () => {
 
             //Setting the text of the h3 element and p element.
             userName.textContent = localStorage.getItem("city");
-            userUrl.textContent = "Temperature: " + data.main.temp + "F" + " Humidity: " + data.main.humidity;
-            // humidity.textContent = "Humidity: " ;
+            userUrl.textContent = "Temperature: " + data.main.temp + " F";
+            humidity.textContent = "Humidity: "  + data.main.humidity;
             console.log(humidity.textContent);
 
             //Appending the dynamically generated html to the div associated with the id="users"
             //Append will attach the element as the bottom most child.
             cityNameContainer.appendChild(userName);
             tempContainer.appendChild(userUrl);
-            // humContainer.append(humidity);
+            humContainer.append(humidity);
 
             console.log(data.main.temp)
 
         });
+
+        fetch(queryFuture)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data)
+            console.log(); 
+
+            // for (let i = 0; i < array.length; i++) {
+            //     const element = array[index];
+                
+            // }
+        })
+
 })
 
-cityNameContainer.textContent = localStorage.getItem("city")
+cityNameContainer.textContent = "Last city searched: " + localStorage.getItem("city");
 
 // Now I need a fetch(queryURL)
 console.log(queryURL)
