@@ -1,9 +1,9 @@
 var APIKey = "2d62885b9291cabc94e793d6b1fc4f27"
 
-var city = localStorage.getItem("city");
+var city = localStorage.getItem("city").replace(/\s/g, '+');
 
 var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + APIKey;
-var queryFuture = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial" + "&appid=" + APIKey;
+var queryFuture = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&5units=imperial" + "&appid=" + APIKey;
 
 console.log(city);
 
@@ -31,6 +31,7 @@ var tempContainer = document.querySelector('#temp-result')
 var humContainer = document.querySelector('#hum-result')
 
 button1.addEventListener("click", () => {
+    // empty()
   
             console.log(typeArea.value)
             saverTester("city", typeArea.value)
@@ -71,10 +72,11 @@ button1.addEventListener("click", () => {
             console.log(data)
             console.log(); 
 
-            // for (let i = 0; i < array.length; i++) {
-            //     const element = array[index];
+            for (let i = 0; i < 5; i++) {
+                // const forecast;
+                // need to get five day forcast
                 
-            // }
+            }
         })
 
 })
