@@ -44,7 +44,7 @@ button1.addEventListener("click", () => {
 
     saverTester("city", typeArea.value)
 
-    fetch("http://api.openweathermap.org/data/2.5/weather?q=" + typeArea.value + "&units=imperial" + "&appid=" + APIKey)
+    fetch("https://api.openweathermap.org/data/2.5/weather?q=" + typeArea.value + "&units=imperial" + "&appid=" + APIKey)
         .then(function (response) {
             return response.json();
         })
@@ -78,7 +78,7 @@ button1.addEventListener("click", () => {
             var latEl = data.coord.lat;
             var lonEl = data.coord.lon;
             // UV Data!
-            fetch("http://api.openweathermap.org/data/2.5/onecall?lat=" + latEl + "&lon=" + lonEl + "&appid=" + APIKey)
+            fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + latEl + "&lon=" + lonEl + "&appid=" + APIKey)
                 .then(function (response) {
                     return response.json();
                 })
@@ -101,7 +101,7 @@ button1.addEventListener("click", () => {
                 })
         });
 
-    fetch("http://api.openweathermap.org/data/2.5/forecast?q=" + typeArea.value + "&units=imperial" + "&appid=" + APIKey)
+    fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + typeArea.value + "&units=imperial" + "&appid=" + APIKey)
         .then(function (response) {
             return response.json();
         })
