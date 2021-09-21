@@ -1,0 +1,50 @@
+h1 {
+    background-color: lightskyblue;
+    padding: 3%;
+    margin-bottom: 2%;
+}
+
+#searcher {
+    width: 20%;
+}
+
+.searchstuff {
+    display:  flex; 
+    flex-direction: row;
+    margin-left: 5%;
+}
+
+.fivetitle {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.fiveday {
+    
+    border: 3px solid lightskyblue;
+    border-radius: 4px;
+    padding: 5%;
+}
+
+.day-item {
+   display:  flex; 
+   flex-direction: row;
+   margin: 5%;
+}
+
+#uv-red {
+    background-color: firebrick;
+}
+
+#uv-green {
+    background-color: lawngreen;
+}
+
+#uv-yellow {
+    background-color: yellow;
+}
+
+#uv-orange {
+    background-color: orange;
+}

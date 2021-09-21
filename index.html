@@ -12,16 +12,16 @@
 
     <body>
       <h1>Weather Dashboard</h1>
-<div>
+<div class="searchstuff">
         <input id="searcher" class="form-control form-control-lg" type="text" placeholder="Search for a city here">
         <button type="button" class="btn btn-primary btn-lg searchcity">Submit</button>    
     </div>
 
 
-          <div ></div>
-          <div ></div>
+          <div class="day-item" >
+          
 
-          <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+          <div class="card text-white bg-primary mb-3" style="width: 20rem; max-height: 28rem;">
             <div class="card-header">Today's Weather</div>
             <div class="card-body">
               <h5 id="city-result" class="card-title"></h5>
@@ -33,10 +33,10 @@
               <p id="icon-result"  class="card-text"></p>
             </div>
           </div>
-
-         <div class="fiveday"></div>
-
-              
+          <div class="fivetitle">
+                <h4>Five Day Forcast</h4><div class="fiveday"></div>
+        </div>
+</div>
      
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
