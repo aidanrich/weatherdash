@@ -40,7 +40,7 @@ var forecast = document.querySelector(".fiveday")
 button1.addEventListener("click", () => {
     $(".card-title").empty();
     $(".card-text").empty();
-
+    $(".fiveday").empty();
 
     saverTester("city", typeArea.value)
 
