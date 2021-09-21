@@ -13,7 +13,7 @@
 - https://github.com/aidanrich/weatherdash is the git repo for this project.
 - https://aidanrich.github.io/weatherdash/ is the live site.
 - On page load the user will find a search bar. Type in your city and click submit to get results.
-![Before search.](./assets/images/weather1.jpg)
+![Before search.](https://github.com/aidanrich/weatherdash/blob/main/assets/images/weather1.JPG)
 ![After search.](./assets/images/weather2.jpg)
 ## Credits
 -  https://openweathermap.org/ is the API used for weather data.
