@@ -1,11 +1,11 @@
 var APIKey = "2d62885b9291cabc94e793d6b1fc4f27"
 
-var city = localStorage.getItem("city").replace(/\s/g, '+');
+// var city = localStorage.getItem("city").replace(/\s/g, '+');
 
 // var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + APIKey;
 // var queryFuture = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial" + "&appid=" + APIKey;
 
-console.log(city);
+// console.log(city);
 
 
 // I need a search function
@@ -152,4 +152,3 @@ cityNameContainer.textContent = "Last city searched: " + localStorage.getItem("c
 
 
 
-console.log("hello")
