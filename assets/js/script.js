@@ -77,7 +77,7 @@ button1.addEventListener("click", () => {
 
             var latEl = data.coord.lat;
             var lonEl = data.coord.lon;
-
+            // UV Data!
             fetch("http://api.openweathermap.org/data/2.5/onecall?lat=" + latEl + "&lon=" + lonEl + "&appid=" + APIKey)
                 .then(function (response) {
                     return response.json();
@@ -88,7 +88,7 @@ button1.addEventListener("click", () => {
                     var uvInfo = document.createElement('p');
                     uvInfo.textContent = "UV: " + data.current.uvi;
                     uvCont.append(uvInfo);
-
+                    // if statement to change color?
 
 
                 })
