@@ -89,6 +89,13 @@ button1.addEventListener("click", () => {
                     uvInfo.textContent = "UV: " + data.current.uvi;
                     uvCont.append(uvInfo);
                     // if statement to change color?
+                    if(data.current.uvi < 2) {
+                        uvCont.setAttribute("id", "uv-green");
+                    } else if(data.current.uvi > 2.01 || data.current.uvi < 5) {
+                        uvCont.setAttribute("id", "uv-yellow");
+                    } else if(data.current.uvi > 5.01 || data.current.uvi < 7) {
+                        uvCont.setAttribute("id", "uv-orange"); 
+                    } else uvCont.setAttribute("id", "uv-red");
 
 
                 })

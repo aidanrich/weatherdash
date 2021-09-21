@@ -35,16 +35,23 @@ h1 {
 
 #uv-red {
     background-color: firebrick;
+    width: 20%;
 }
 
 #uv-green {
     background-color: lawngreen;
+    width: 20%;
+    color: black;
 }
 
 #uv-yellow {
     background-color: yellow;
+    width: 20%;
+    color: black;
 }
 
 #uv-orange {
     background-color: orange;
+    width: 20%;
+    color: black;
 }
